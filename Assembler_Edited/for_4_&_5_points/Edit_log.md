@@ -46,7 +46,7 @@ mov	rdi, rax
 <br>mov rdi, QWORD PTR -40[rbp]
 ```
 ## output:
-<br>Убраны лишние строки:
+Убраны лишние строки:
 ``` assembly
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
@@ -67,7 +67,7 @@ mov	rdi, rax
 	.align 8
 4:
 ```
-input_str:
+## input_str:
 <br>Убраны лишние переприсваивания
 <br>было:
 ``` assembly
