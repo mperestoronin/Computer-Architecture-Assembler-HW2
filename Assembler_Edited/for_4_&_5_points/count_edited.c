@@ -46,7 +46,7 @@ count:
 	mov	eax, DWORD PTR -20[rbp]	# tmp103, i
 	movsx	rbx, eax	# _6, tmp103
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
-	mov rdi, PTR -40[rbp]
+	mov rdi, QWORD PTR -40[rbp]
 	call	strlen@PLT	#
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
 	sub	rax, 1	# _8,
