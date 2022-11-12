@@ -3,9 +3,9 @@
 	.text
 	.section	.rodata
 .LC0:
-	.string	"Letter count: "
+	.string	"Letter count: " #строка "Letter count: (аргумент printf)"
 .LC1:
-	.string	"%c - %i \n"
+	.string	"%c - %i \n" #строчка с параметрами вывода printf (аргумент printf)
 	.text
 	.globl	output
 	.type	output, @function
@@ -19,12 +19,13 @@ output:
 	mov	rbp, rsp
 	.cfi_def_cfa_register 6
 	sub	rsp, 32
-	mov	QWORD PTR -24[rbp], rdi
+	mov	QWORD PTR -24[rbp], rdi # int *ascii
 	lea	rdi, .LC0[rip]
-	call	puts@PLT
-	mov	DWORD PTR -4[rbp], 33
+	call	puts@PLT # вызов printf("%s", "Letter count: \n");
+	mov	DWORD PTR -4[rbp], 33 #int i
 	jmp	.L2
 .L4:
+	# начало if (ascii[i] != 0)
 	mov	eax, DWORD PTR -4[rbp]
 	cdqe
 	lea	rdx, 0[0+rax*4]
@@ -33,6 +34,8 @@ output:
 	mov	eax, DWORD PTR [rax]
 	test	eax, eax
 	je	.L3
+	# конец if (ascii[i] != 0)
+	# начало printf("%c - %i \n", (char)i, ascii[i]);
 	mov	eax, DWORD PTR -4[rbp]
 	cdqe
 	lea	rdx, 0[0+rax*4]
@@ -44,7 +47,8 @@ output:
 	mov	esi, eax
 	lea	rdi, .LC1[rip]
 	mov	eax, 0
-	call	printf@PLT
+	call	printf@PLT # вызов printf внутри цикла for
+	# конец printf("%c - %i \n", (char)i, ascii[i]);
 .L3:
 	add	DWORD PTR -4[rbp], 1
 .L2:
