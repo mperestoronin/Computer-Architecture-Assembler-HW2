@@ -1,7 +1,7 @@
 # Computer-Architecture-Assembler-HW2
 <br>The second homework for computer architecture class
 <br>Сделал Пересторонин Максим Дмитриевич БПИ 217 Вариант 19
-<br> ВНИМАНИЕ! Файлы стоит смотреть по порядку. Т.е. комментарии в файле, необходимиые для оценки 4, МОГУТ не отображаться в файле на оценку 6. Смотрите все последовательно!
+Программа работает со стандратными ASCII символами (128), вот [таблица](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/photos/ascii.png).
 ## На 4 балла:
 Для компиляции без модификаций использовалась команда:
 <br>`gcc -masm=intel ./<file_name>.c -S -o ./<file_name>.s`
