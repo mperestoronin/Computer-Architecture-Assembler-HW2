@@ -54,8 +54,8 @@ output:
 4:
 input_str:
 было:
-mov	rax, QWORD PTR stdin[rip]	# stdin.1_2, stdin
-mov	rdx, rax	#, stdin.1_2
+mov	rax, QWORD PTR stdin[rip]
+mov	rdx, rax	
 стало:
 mov rdx, QWORD PTR stdin[rip]
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
