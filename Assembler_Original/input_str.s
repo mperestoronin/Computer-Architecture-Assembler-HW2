@@ -12,14 +12,16 @@ input_str:
 	.cfi_offset 6, -16
 	mov	rbp, rsp
 	.cfi_def_cfa_register 6
-	mov	rax, QWORD PTR stdin[rip]
+	mov	rax, QWORD PTR stdin[rip] #stdin
 	mov	rdi, rax
-	call	fflush@PLT
+	call	fflush@PLT # fflush(stdin);
+	# начало fgets(string, 256, stdin);
 	mov	rax, QWORD PTR stdin[rip]
 	mov	rdx, rax
 	mov	esi, 256
 	lea	rdi, string.2495[rip]
 	call	fgets@PLT
+	# конец fgets(string, 256, stdin);
 	lea	rax, string.2495[rip]
 	pop	rbp
 	.cfi_def_cfa 7, 8
