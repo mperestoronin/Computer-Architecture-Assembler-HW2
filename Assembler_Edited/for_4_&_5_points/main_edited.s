@@ -28,7 +28,7 @@ main:
 # ./main.c:11:     output(result);
 	mov rdi, QWORD PTR -16[rbp] # - передаем result в функцию output
 	call	output@PLT	#
-	mov	eax, 0	# _8,
+	mov	eax, 0	# возвращаем 0 в конце успешной работы программы
 # ./main.c:12: }
 	leave	
 	ret	
