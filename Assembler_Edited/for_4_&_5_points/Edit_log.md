@@ -52,3 +52,9 @@ output:
 3:
 	.align 8
 4:
+input_str:
+было:
+mov	rax, QWORD PTR stdin[rip]	# stdin.1_2, stdin
+mov	rdx, rax	#, stdin.1_2
+стало:
+mov rdx, QWORD PTR stdin[rip]
