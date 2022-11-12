@@ -33,7 +33,7 @@ count:
 mov	rax, QWORD PTR -40[rbp]
 mov	rdi, rax	
 стало:
-mov rdi, PTR -40[rbp]
+mov rdi, QWORD PTR -40[rbp]
 output:
 Убраны лишние строки:
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
