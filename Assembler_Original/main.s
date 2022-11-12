@@ -19,18 +19,22 @@ main:
 	.cfi_def_cfa_register 6
 	sub	rsp, 16
 	lea	rdi, .LC0[rip]
-	call	puts@PLT
+	call	puts@PLT # вызов printf
 	mov	eax, 0
-	call	input_str@PLT
-	mov	QWORD PTR -16[rbp], rax
-	mov	rax, QWORD PTR -16[rbp]
+	call	input_str@PLT #вызов input_str
+	mov	QWORD PTR -16[rbp], rax # char* input
+	#начало выполнения строчки int* result = count(input);
+	mov	rax, QWORD PTR -16[rbp] # int* result
 	mov	rdi, rax
 	call	count@PLT
 	mov	QWORD PTR -8[rbp], rax
+	#конец выполнения строчки int* result = count(input);
+	# начало выполнения строчки output(result);
 	mov	rax, QWORD PTR -8[rbp]
 	mov	rdi, rax
-	call	output@PLT
+	call	output@PLT # вызов output
 	mov	eax, 0
+	#конец строчки output(result);
 	leave
 	.cfi_def_cfa 7, 8
 	ret
