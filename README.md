@@ -20,8 +20,8 @@
   * rsi, esi - второй аргумент в функцию
   * rdx, edx - третий аргумент в функцию
   * EAX, ECX, EDX, EDI и ESI - это регистры общего назначения, в которых можно хранить почти любую информацию.
-* В функциях для формальных параметров добавить [комментарии, описывающие связь между параметрами языка Си и регистрами (стеком)](https://github.com/mperestoronin/Computer-Architecture-Assembler/tree/main/Assembler_edited/for_5_points)
-* Отчет: В программе есть функции с передачей данных через параметры, используются локальные переменные. Были добавлены новые комментарии (см. ссылки выше)
+* В функциях для формальных параметров добавить [комментарии, описывающие связь между параметрами языка Си и регистрами (стеком)](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/tree/main/Assembler_Edited/for_4_%26_5_points)
+* Отчет: В программе есть функции с передачей данных через параметры, используются локальные переменные. Код прокомментирован.
 ## На 6 баллов:
 * Рефакторинг программы на ассемблере за счет максимального использования регистров процессора. Добавление этой программы к уже представленным. Список изменений [тут](https://github.com/mperestoronin/Computer-Architecture-Assembler/blob/main/Assembler_edited/for_6_points/Edit_log.md), сам код [тут.](https://github.com/mperestoronin/Computer-Architecture-Assembler/tree/main/Assembler_edited/for_6_points)
 * Добавление [комментариев в разработанную программу](https://github.com/mperestoronin/Computer-Architecture-Assembler/tree/main/Assembler_edited/for_6_points), поясняющих эквивалентное использование регистров вместо переменных исходной программы на C.
