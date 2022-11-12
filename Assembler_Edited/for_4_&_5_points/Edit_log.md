@@ -42,7 +42,9 @@ mov	rax, QWORD PTR -40[rbp]
 mov	rdi, rax	
 ```
 стало:
+``` assembly
 <br>mov rdi, QWORD PTR -40[rbp]
+```
 ## output:
 <br>Убраны лишние строки:
 ``` assembly
