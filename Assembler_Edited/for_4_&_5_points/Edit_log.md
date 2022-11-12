@@ -5,7 +5,8 @@
 main:
 Убраны лишние переприсваивания
 Было:
-<br>```	assembly
+<br>
+```	assembly
 mov	rax, QWORD PTR -16[rbp]
 mov	rdi, rax
 ```
