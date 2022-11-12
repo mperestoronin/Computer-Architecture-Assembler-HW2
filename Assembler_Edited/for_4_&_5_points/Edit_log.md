@@ -1,3 +1,4 @@
+Из всех файлов убраны cdqe
 main:
 Убраны лишние переприсваивания
 Было:
@@ -24,3 +25,10 @@ mov rdi, QWORD PTR -16[rbp]
 3:
 	.align 8
 4:
+count:
+убрано лишнее присваивание:
+было:
+mov	rax, QWORD PTR -40[rbp]
+mov	rdi, rax	
+стало:
+mov rdi, PTR -40[rbp]
