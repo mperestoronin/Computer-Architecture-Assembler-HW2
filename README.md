@@ -14,7 +14,7 @@
 * Сформировать отчет, описывающий результаты тестовых прогонов и используемых опций компиляции и/или описания проведенных модификаций. [Заключение по тестам тут](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/Tests.md#%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5) (смотрите чуть ниже) - [список изменений тут](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/Assembler_Edited/for_4_%26_5_points/Edit_log.md)
 ## На 5 баллов:
 * Я использовал [локальные переменные и передавал данные в функции через параметры](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/tree/main/CFiles)
-* В ассемблерную программу при вызове функции добавить [комментарии, описывающие передачу фактических параметров и перенос возвращаемого результата.](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/tree/main/Assembler_Edited/for_4_%26_5_points)
+* В ассемблерную программу при вызове функции добавить [комментарии, описывающие передачу фактических параметров и перенос возвращаемого результата.](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/Assembler_Edited/for_4_%26_5_points/main_edited.s)
 * Между параметрами языка Си и регистрами assembly была установлена следующая связь:
   * rdi, edi - первый аргумент в функцию
   * rsi, esi - второй аргумент в функцию
