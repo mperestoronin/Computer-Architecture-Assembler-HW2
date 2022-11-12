@@ -4,9 +4,9 @@
 <br>Из всех файлов убраны cdqe
 ## main:
 <br>Убраны лишние переприсваивания
-Было:
+<br>Было:
 <br>
-```	assembly
+``` assembly
 mov	rax, QWORD PTR -16[rbp]
 mov	rdi, rax
 ```
@@ -15,6 +15,7 @@ mov	rdi, rax
 mov rdi, QWORD PTR -16[rbp]
 ```
 Убраны лишние строки:
+``` assembly
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
@@ -33,11 +34,14 @@ mov rdi, QWORD PTR -16[rbp]
 3:
 	.align 8
 4:
+```
 count:
 убрано лишнее присваивание:
 было:
+``` assembly
 mov	rax, QWORD PTR -40[rbp]
 mov	rdi, rax	
+```
 стало:
 mov rdi, QWORD PTR -40[rbp]
 output:
