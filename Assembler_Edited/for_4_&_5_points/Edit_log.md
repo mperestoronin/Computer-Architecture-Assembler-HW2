@@ -1,17 +1,19 @@
 # Список изменений
 Следующие флаги были применены ко всем файлам:
 `gcc -masm=intel -fno-asynchronous-unwind-tables -fno-jump-tables -fno-stack-protector -fno-exceptions -fverbose-asm ./<filename>.c -S -o ./<filename>.s`
-Из всех файлов убраны cdqe
-main:
-Убраны лишние переприсваивания
+<br>Из всех файлов убраны cdqe
+## main:
+<br>Убраны лишние переприсваивания
 Было:
 <br>
 ```	assembly
 mov	rax, QWORD PTR -16[rbp]
 mov	rdi, rax
 ```
-стало:
+<br>стало:
+``` assembly
 mov rdi, QWORD PTR -16[rbp]
+```
 Убраны лишние строки:
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
