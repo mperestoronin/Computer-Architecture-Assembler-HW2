@@ -1,3 +1,5 @@
+Следующие флаги были применены ко всем файлам
+gcc -masm=intel -fno-asynchronous-unwind-tables -fno-jump-tables -fno-stack-protector -fno-exceptions -fverbose-asm ./<filename>.c -S -o ./<filename>.s
 Из всех файлов убраны cdqe
 main:
 Убраны лишние переприсваивания
