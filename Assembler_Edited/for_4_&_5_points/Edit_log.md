@@ -53,11 +53,19 @@ output:
 	.align 8
 4:
 input_str:
+Убраны лишние переприсваивания
 было:
 mov	rax, QWORD PTR stdin[rip]
 mov	rdx, rax	
 стало:
 mov rdx, QWORD PTR stdin[rip]
+было:
+mov	rax, QWORD PTR stdin[rip]	
+mov	rdi, rax	#, stdin.0_1
+стало:
+mov rdi, QWORD PTR stdin[rip]
+
+Убраны лишние строки:
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
