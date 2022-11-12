@@ -1,11 +1,12 @@
-Следующие флаги были применены ко всем файлам
-gcc -masm=intel -fno-asynchronous-unwind-tables -fno-jump-tables -fno-stack-protector -fno-exceptions -fverbose-asm ./<filename>.c -S -o ./<filename>.s
+# Список изменений
+Следующие флаги были применены ко всем файлам:
+`gcc -masm=intel -fno-asynchronous-unwind-tables -fno-jump-tables -fno-stack-protector -fno-exceptions -fverbose-asm ./<filename>.c -S -o ./<filename>.s`
 Из всех файлов убраны cdqe
 main:
 Убраны лишние переприсваивания
 Было:
-mov	rax, QWORD PTR -16[rbp]	
-mov	rdi, rax
+`mov	rax, QWORD PTR -16[rbp]	
+mov	rdi, rax`
 стало:
 mov rdi, QWORD PTR -16[rbp]
 Убраны лишние строки:
