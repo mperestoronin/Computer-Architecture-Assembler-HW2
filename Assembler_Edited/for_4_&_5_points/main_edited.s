@@ -12,7 +12,7 @@ main:
 	endbr64	
 	push	rbp	
 	mov	rbp, rsp	
-	sub	rsp, 16	#,
+	sub	rsp, 16	
 # ./main.c:8:     printf("Input your string (256 characters maximum) not extended ASCII only:\n");
 	lea	rdi, .LC0[rip]	
 	call	puts@PLT	
