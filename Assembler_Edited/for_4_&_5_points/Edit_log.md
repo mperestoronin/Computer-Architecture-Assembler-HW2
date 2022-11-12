@@ -5,12 +5,11 @@
 ## main:
 <br>Убраны лишние переприсваивания
 <br>Было:
-<br>
 ``` assembly
 mov	rax, QWORD PTR -16[rbp]
 mov	rdi, rax
 ```
-<br>стало:
+стало:
 ``` assembly
 mov rdi, QWORD PTR -16[rbp]
 ```
@@ -35,17 +34,18 @@ mov rdi, QWORD PTR -16[rbp]
 	.align 8
 4:
 ```
-count:
-убрано лишнее присваивание:
-было:
+## count:
+<br>убрано лишнее присваивание:
+<br>было:
 ``` assembly
 mov	rax, QWORD PTR -40[rbp]
 mov	rdi, rax	
 ```
 стало:
-mov rdi, QWORD PTR -40[rbp]
-output:
-Убраны лишние строки:
+<br>mov rdi, QWORD PTR -40[rbp]
+## output:
+<br>Убраны лишние строки:
+``` assembly
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
@@ -64,20 +64,29 @@ output:
 3:
 	.align 8
 4:
+```
 input_str:
-Убраны лишние переприсваивания
-было:
+<br>Убраны лишние переприсваивания
+<br>было:
+``` assembly
 mov	rax, QWORD PTR stdin[rip]
-mov	rdx, rax	
+mov	rdx, rax
+```
 стало:
+``` assembly
 mov rdx, QWORD PTR stdin[rip]
+```
 было:
+``` assembly
 mov	rax, QWORD PTR stdin[rip]	
-mov	rdi, rax	#, stdin.0_1
+mov	rdi, rax	
+```
 стало:
+``` assembly
 mov rdi, QWORD PTR stdin[rip]
-
+```
 Убраны лишние строки:
+``` assembly
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
@@ -96,3 +105,4 @@ mov rdi, QWORD PTR stdin[rip]
 3:
 	.align 8
 4:
+```
