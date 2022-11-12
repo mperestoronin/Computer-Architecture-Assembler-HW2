@@ -29,14 +29,12 @@ count:
 	jle	.L3	#,
 # ./count.c:8:             ascii[asciiVal]++;
 	mov	eax, DWORD PTR -24[rbp]	# tmp96, asciiVal
-	cdqe
 	lea	rdx, 0[0+rax*4]	# tmp97,
 	lea	rax, ascii.2496[rip]	# tmp98,
 	mov	eax, DWORD PTR [rdx+rax]	# _4, ascii
 # ./count.c:8:             ascii[asciiVal]++;
 	lea	ecx, 1[rax]	# _5,
 	mov	eax, DWORD PTR -24[rbp]	# tmp100, asciiVal
-	cdqe
 	lea	rdx, 0[0+rax*4]	# tmp101,
 	lea	rax, ascii.2496[rip]	# tmp102,
 	mov	DWORD PTR [rdx+rax], ecx	# ascii, _5
@@ -48,8 +46,7 @@ count:
 	mov	eax, DWORD PTR -20[rbp]	# tmp103, i
 	movsx	rbx, eax	# _6, tmp103
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
-	mov	rax, QWORD PTR -40[rbp]	# tmp104, string
-	mov	rdi, rax	#, tmp104
+	mov rdi, PTR -40[rbp]
 	call	strlen@PLT	#
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
 	sub	rax, 1	# _8,
