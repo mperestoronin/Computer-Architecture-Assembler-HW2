@@ -5,6 +5,8 @@
 ![](photos/test1.png)
 <br>модифицированная: <br>
 ![](photos/un1.png)
+<br>с регистрами: <br>
+![](photos/reg1.png)
 ### Тест 2:
 <br>Входные данные: abcdefghijklmnop
 <br>Не модифицированная: <br>
