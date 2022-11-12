@@ -15,8 +15,8 @@ count:
 	push	rbx
 	sub	rsp, 40
 	.cfi_offset 3, -24
-	mov	QWORD PTR -40[rbp], rdi
-	mov	DWORD PTR -24[rbp], 0
+	mov	QWORD PTR -40[rbp], rdi # const char *string
+	mov	DWORD PTR -24[rbp], 0 # int i = 0
 	jmp	.L2
 .L4:
 	mov	eax, DWORD PTR -24[rbp]
@@ -25,9 +25,10 @@ count:
 	add	rax, rdx
 	movzx	eax, BYTE PTR [rax]
 	movsx	eax, al
-	mov	DWORD PTR -20[rbp], eax
-	cmp	DWORD PTR -20[rbp], 32
+	mov	DWORD PTR -20[rbp], eax # asciiVal
+	cmp	DWORD PTR -20[rbp], 32 # if (asciiVal > 32)
 	jle	.L3
+	#начало ascii[asciiVal]++;
 	mov	eax, DWORD PTR -20[rbp]
 	cdqe
 	lea	rdx, 0[0+rax*4]
@@ -39,17 +40,20 @@ count:
 	lea	rdx, 0[0+rax*4]
 	lea	rax, ascii.2496[rip]
 	mov	DWORD PTR [rdx+rax], ecx
+	# конец ascii[asciiVal]++;
 .L3:
-	add	DWORD PTR -24[rbp], 1
+	add	DWORD PTR -24[rbp], 1 # i++
 .L2:
-	mov	eax, DWORD PTR -24[rbp]
+	# начало цикла for
+	mov	eax, DWORD PTR -24[rbp] # i
 	movsx	rbx, eax
-	mov	rax, QWORD PTR -40[rbp]
+	mov	rax, QWORD PTR -40[rbp] #string
 	mov	rdi, rax
-	call	strlen@PLT
+	call	strlen@PLT # вызов strlen
 	sub	rax, 1
 	cmp	rbx, rax
 	jb	.L4
+	# конец цикла for
 	lea	rax, ascii.2496[rip]
 	add	rsp, 40
 	pop	rbx
