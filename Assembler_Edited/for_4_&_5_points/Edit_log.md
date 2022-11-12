@@ -5,8 +5,8 @@
 main:
 Убраны лишние переприсваивания
 Было:
-`mov	rax, QWORD PTR -16[rbp]	
-mov	rdi, rax`
+<br>`mov	rax, QWORD PTR -16[rbp]	
+<br> mov	rdi, rax`
 стало:
 mov rdi, QWORD PTR -16[rbp]
 Убраны лишние строки:
