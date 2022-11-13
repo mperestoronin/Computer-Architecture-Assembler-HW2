@@ -22,4 +22,7 @@
 * Добавление [комментариев в разработанную программу](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/tree/main/Assembler_Edited/for_6_points), поясняющих эквивалентное использование регистров вместо переменных исходной программы на C.
 * Представление [результатов тестовых прогонов](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/Tests.md) для разработанной программы. Оценка корректности ее выполнения на основе сравнения тестовых прогонов результатами тестирования предшествующих программ.
 * [Заключение по тестам](https://github.com/mperestoronin/Computer-Architecture-Assembler-HW2/blob/main/Tests.md#%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)
+* Сопоставление [размеров](https://github.com/mperestoronin/Computer-Architecture-Assembler/blob/main/fileSizes.md) программы на ассемблере, полученной после
+компиляции с языка C с модифицированной программой, использующей
+регистры.
 <br>По всем вопросам писшите на почту mdperestoronin@edu.hse.ru или в телеграмм @Maxim_Perestoronin
