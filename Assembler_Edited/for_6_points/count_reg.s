@@ -23,18 +23,18 @@ count:
 	movzx	eax, BYTE PTR [rax]	# _3, *_2
 # ./count.c:6:         int asciiVal = (int) string[i];
 	movsx	eax, al	# tmp94, _3
-	mov	r13d, eax	# asciiVal, tmp94
+	mov	r13d, eax	# asciiVal, tmp94 (заменен DWORD PTR -24[rbp] (переменная asciiVal в С коде) на r13d)
 # ./count.c:7:         if (asciiVal > 32) {
-	cmp	r13d, 32	# asciiVal,
+	cmp	r13d, 32	# asciiVal, (заменен DWORD PTR -24[rbp] (переменная asciiVal в С коде) на r13d)
 	jle	.L3	#,
 # ./count.c:8:             ascii[asciiVal]++;
-	mov	eax, r13d	# tmp96, asciiVal
+	mov	eax, r13d	# tmp96, asciiVal (заменен DWORD PTR -24[rbp] (переменная asciiVal в С коде) на r13d)
 	lea	rdx, 0[0+rax*4]	# tmp97,
 	lea	rax, ascii.2496[rip]	# tmp98,
 	mov	eax, DWORD PTR [rdx+rax]	# _4, ascii
 # ./count.c:8:             ascii[asciiVal]++;
 	lea	ecx, 1[rax]	# _5,
-	mov	eax, r13d	# tmp100, asciiVal
+	mov	eax, r13d	# tmp100, asciiVal (заменен DWORD PTR -24[rbp] (переменная asciiVal в С коде) на r13d)
 	lea	rdx, 0[0+rax*4]	# tmp101,
 	lea	rax, ascii.2496[rip]	# tmp102,
 	mov	DWORD PTR [rdx+rax], ecx	# ascii, _5
