@@ -11,12 +11,12 @@ count:
 	sub	rsp, 40	
 	mov	QWORD PTR -40[rbp], rdi	# string, string
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
-	mov	r12d, 0	# i,
+	mov	r12d, 0	# i, (заменен DWORD PTR -20[rbp] (переменная i в С коде) на r12d)
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
 	jmp	.L2	#
 .L4:
 # ./count.c:6:         int asciiVal = (int) string[i];
-	mov	eax, r12d	# tmp92, i
+	mov	eax, r12d	# tmp92, i (заменен DWORD PTR -20[rbp] (переменная i в С коде) на r12d)
 	movsx	rdx, eax	# _1, tmp92
 	mov	rax, QWORD PTR -40[rbp]	# tmp93, string
 	add	rax, rdx	# _2, _1
@@ -40,10 +40,10 @@ count:
 	mov	DWORD PTR [rdx+rax], ecx	# ascii, _5
 .L3:
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
-	add	r12d, 1	# i,
+	add	r12d, 1	# i, (заменен DWORD PTR -20[rbp] (переменная i в С коде) на r12d)
 .L2:
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
-	mov	eax, r12d	# tmp103, i
+	mov	eax, r12d	# tmp103, i (заменен DWORD PTR -20[rbp] (переменная i в С коде) на r12d)
 	movsx	rbx, eax	# _6, tmp103
 # ./count.c:5:     for (int i = 0; i < strlen(string) - 1; ++i) {
 	mov rdi, QWORD PTR -40[rbp]
